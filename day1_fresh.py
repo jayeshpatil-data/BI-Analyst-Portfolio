@@ -3,7 +3,7 @@
 print("Fresh Start - Day 1 Working!")
 
 import sys
-print(f"Python: {sys.version}")
+print(f"Python: {sys.version}") 
 
 for i in range(5):
     print(f"Learning loop {i} - 18 LPA goal")
