@@ -1,0 +1,6 @@
+-- For Tableau dashboard
+SELECT region, 
+SUM(CASE WHEN dpd > 90 THEN outstanding_amt ELSE 0 END) as high_risk_amt,
+COUNT(*) as total
+FROM bureau_data
+GROUP BY region;
