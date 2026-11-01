@@ -1,0 +1,6 @@
+WITH delinquent AS (
+ SELECT account_id, customer_id,
+ CASE WHEN dpd > 30 THEN 1 ELSE 0 END as is_delinquent
+ FROM bureau_data
+)
+SELECT * FROM delinquent WHERE is_delinquent = 1;
