@@ -1,0 +1,5 @@
+-- Portfolio by Product
+SELECT product_type, COUNT(*) as total_accounts, 
+AVG(credit_score) as avg_score
+FROM bureau_data
+GROUP BY product_type;
