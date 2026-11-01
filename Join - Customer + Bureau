@@ -1,0 +1,4 @@
+SELECT c.customer_name, b.credit_score, b.product_type
+FROM customers c
+JOIN bureau_data b ON c.customer_id = b.customer_id
+WHERE b.credit_score < 650;
