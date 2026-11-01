@@ -1,0 +1,4 @@
+SELECT customer_id, loan_date,
+ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY loan_date) as loan_num,
+LAG(credit_score) OVER (PARTITION BY customer_id ORDER BY loan_date) as prev_score
+FROM bureau_data;
